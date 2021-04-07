@@ -47,7 +47,9 @@
 
 1. Add an `engineers` group to the system.
 
-    - Command to add group: sudo addgroup engineers
+    - Command to add group: 
+    
+    sudo addgroup engineers
 
 2. Add users `sam`, `joe`, `amy`, and `sara` to the managed group.
 

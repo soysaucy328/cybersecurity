@@ -19,39 +19,78 @@ Save and submit the completed file for your homework submission.
 
 **Bonus** 
 - Command to create an incremental archive called `logs_backup_tar.gz` with only changed files to `snapshot.file` for the `/var/log` directory:
-    tar -cvvf 
+    sudo tar -cvvf --listed-incremental=snapshot.file --level=0 /var/log
 
 #### Critical Analysis Question
 
 - Why wouldn't you use the options `-x` and `-c` at the same time with `tar`?
-
+-x extracts the archive and -c creates an archive so it doesn't make sense to use them at the same time.
 ---
 
 ### Step 2: Create, Manage, and Automate Cron Jobs
 
 1. Cron job for backing up the `/var/log/auth.log` file:
+You have to edit the crontab
 
+crontab -e 
+
+then add a line to it
+
+0 6 * * 3 sudo tar -czvf auth_backup.tgz /var/log/auth.log
 ---
 
 ### Step 3: Write Basic Bash Scripts
 
 1. Brace expansion command to create the four subdirectories:
 
+mdir -p ~/backups/{freemem,diskuse,openlist,freedisk}
+
 2. Paste your `system.sh` script edits below:
 
     ```bash
-    #!/bin/bash
-    [Your solution script contents here]
+    
+#!/bin/bash
+
+
+#creates the four directories first
+
+mkdir -p ~/backups/{freemem,diskuse,openlist,diskuse}
+
+#prints free memory information and prints it to free_mem.txt
+
+sudo free -h > ~/backups/freemem/free_mem.txt
+
+#prints disk usage information to disk_usage.txt
+
+sudo du -h > ~/backups/diskuse/disk_usage.txt
+
+#lists open files and prints to open_list.txt
+
+sudo lsof > ~/backups/openlist/open_list.txt
+
+#prints free disk info to free_disk.txt
+
+sudo df -h > ~/backups/diskuse/free_disk.txt
     ```
 
 3. Command to make the `system.sh` script executable:
 
+chmod u+x ~/system.sh
+
 **Optional**
 - Commands to test the script and confirm its execution:
 
+cat ~/backups/freemem/free_mem.txt
+
+cat ~/backups/diskuse/disk_usage.txt
+
+cat ~/backups/openlist/open_list.txt
+
+cat ~/backups/diskuse/free_disk.txt
 **Bonus**
 - Command to copy `system` to system-wide cron directory:
 
+sudo cp ~/system.sh /etc/cron.weekly
 ---
 
 ### Step 4. Manage Log File Sizes
@@ -62,21 +101,29 @@ Save and submit the completed file for your homework submission.
 
     - Add your config file edits below:
 
-    ```bash
-    [Your logrotate scheme edits here]
-    ```
+/var/log/auth.log {
+    weekly
+    rotate 7
+    notifempty
+    delaycompression
+    missingok
+}
+
 ---
 
 ### Bonus: Check for Policy and File Violations
 
 1. Command to verify `auditd` is active:
 
+systemctl status auditd
+
 2. Command to set number of retained logs and maximum log file size:
 
     - Add the edits made to the configuration file below:
 
     ```bash
-    [Your solution edits here]
+   max_log_file = 35
+   num_logs = 7
     ```
 
 3. Command using `auditd` to set rules for `/etc/shadow`, `/etc/passwd` and `/var/log/auth.log`:
@@ -85,21 +132,38 @@ Save and submit the completed file for your homework submission.
     - Add the edits made to the `rules` file below:
 
     ```bash
-    [Your solution edits here]
+    -w /etc/shawdow -p wra -k hashpass_audit
+    
+    -w /etc/passwd -p wra -k userpass_audit
+    
+    -w /var/log/auth.log -p wra -k authlog_audit
     ```
 
 4. Command to restart `auditd`:
 
+sudo systemctl restart auditd
+
 5. Command to list all `auditd` rules:
+
+auditctl -l
 
 6. Command to produce an audit report:
 
+sudo aureport -au
+
 7. Create a user with `sudo useradd attacker` and produce an audit report that lists account modifications:
+
+sudo useradd atacker
+
+sudo aureport -m
 
 8. Command to use `auditd` to watch `/var/log/cron`:
 
+sudo auditctl -w /var/log/cron
+
 9. Command to verify `auditd` rules:
 
+sudo auditctl -l
 ---
 
 ### Bonus (Research Activity): Perform Various Log Filtering Techniques

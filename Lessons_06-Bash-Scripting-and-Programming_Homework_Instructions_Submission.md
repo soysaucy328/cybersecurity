@@ -7,7 +7,7 @@ Save and submit the completed file for your homework submission.
 **Step 1: Shadow People** 
 
 1. Create a secret user named `sysd`. Make sure this user doesn't have a home folder created:
-    - `Your solution command here`
+    - sudo 
 
 2. Give your secret user a password: 
     - `Your solution command here`

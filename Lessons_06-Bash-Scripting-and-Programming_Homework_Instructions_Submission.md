@@ -7,33 +7,34 @@ Save and submit the completed file for your homework submission.
 **Step 1: Shadow People** 
 
 1. Create a secret user named `sysd`. Make sure this user doesn't have a home folder created:
-    - sudo 
+    - sudo useradd sysd
+    - Used useradd instead of adduser which would have created a home directory
 
 2. Give your secret user a password: 
-    - `Your solution command here`
+    - sudo passwd sysd
+    - Had to look this one up as I don't remember going over this in class
 
 3. Give your secret user a system UID < 1000:
-    - `Your solution command here`
+    - sudo usermod -u 333 sysd
 
 4. Give your secret user the same GID:
-   - `Your solution command here`
+   - sudo groupmod -g 333 sysd
 
 5. Give your secret user full `sudo` access without the need for a password:
-   -  `Your solution command here`
+   - I used nano to check /etc/sudoers. I forgot what the line was to set no password needed for sudo.
+   - Copied the following command that was set to vagrant but changed the user to sysd,
+   - sysd ALL=(ALL:ALL) NOPASSWD:ALL
 
 6. Test that `sudo` access works without your password:
+   - I just used sudo nano /etc/passwd
 
-    ```bash
-    Your bash commands here
-    ```
+
 
 **Step 2: Smooth Sailing**
 
 1. Edit the `sshd_config` file:
 
-    ```bash
-    Your bash commands here
-    ```
+Used google to find sshd_config file, 
 
 **Step 3: Testing Your Configuration Update**
 1. Restart the SSH service:

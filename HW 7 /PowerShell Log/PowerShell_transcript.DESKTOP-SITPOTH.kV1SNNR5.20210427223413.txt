@@ -1,0 +1,151 @@
+﻿**********************
+Windows PowerShell transcript start
+Start time: 20210427223414
+Username: DESKTOP-SITPOTH\sysadmin
+RunAs User: DESKTOP-SITPOTH\sysadmin
+Configuration Name: 
+Machine: DESKTOP-SITPOTH (Microsoft Windows NT 10.0.19041.0)
+Host Application: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+Process ID: 7872
+PSVersion: 5.1.19041.1
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.19041.1
+BuildVersion: 10.0.19041.1
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+**********************
+Command start time: 20210427223437
+**********************
+PS C:\Users\sysadmin> cd '.\Documents\
+'
+**********************
+Windows PowerShell transcript start
+Start time: 20210427223437
+Username: DESKTOP-SITPOTH\sysadmin
+RunAs User: DESKTOP-SITPOTH\sysadmin
+Configuration Name: 
+Machine: DESKTOP-SITPOTH (Microsoft Windows NT 10.0.19041.0)
+Host Application: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+Process ID: 7872
+PSVersion: 5.1.19041.1
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.19041.1
+BuildVersion: 10.0.19041.1
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+**********************
+Command start time: 20210427223437
+**********************
+PS>CommandInvocation(Out-String): "Out-String"
+>> ParameterBinding(Out-String): name="InputObject"; value="Illegal characters in path."
+cd : Illegal characters in path.
+At line:1 char:1
++ cd '.\Documents\
++ ~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidArgument: (C:\Users\sysadmin\Documents\
+:String) [Set-Location], ArgumentException
+    + FullyQualifiedErrorId : ItemExistsArgumentError,Microsoft.PowerShell.Commands.SetLocationCommand
+cd : Illegal characters in path.
+At line:1 char:1
++ cd '.\Documents\
++ ~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidArgument: (C:\Users\sysadmin\Documents\
+:String) [Set-Location], ArgumentException
+    + FullyQualifiedErrorId : ItemExistsArgumentError,Microsoft.PowerShell.Commands.SetLocationCommand
+cd : Illegal characters in path.
+At line:1 char:1
++ cd '.\Documents\
++ ~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidArgument: (C:\Users\sysadmin\Documents\
+:String) [Set-Location], ArgumentException
+    + FullyQualifiedErrorId : ItemExistsArgumentError,Microsoft.PowerShell.Commands.SetLocationCommand
+
+**********************
+Windows PowerShell transcript start
+Start time: 20210427223439
+Username: DESKTOP-SITPOTH\sysadmin
+RunAs User: DESKTOP-SITPOTH\sysadmin
+Configuration Name: 
+Machine: DESKTOP-SITPOTH (Microsoft Windows NT 10.0.19041.0)
+Host Application: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+Process ID: 7872
+PSVersion: 5.1.19041.1
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.19041.1
+BuildVersion: 10.0.19041.1
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+**********************
+Command start time: 20210427223439
+**********************
+PS>CommandInvocation(Out-String): "Out-String"
+>> ParameterBinding(Out-String): name="InputObject"; value="Cannot find path 'C:\Users\sysadmin\Documents\
+' because it does not exist."
+cd : Cannot find path 'C:\Users\sysadmin\Documents\
+' because it does not exist.
+At line:1 char:1
++ cd '.\Documents\
++ ~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (C:\Users\sysadmin\Documents\
+:String) [Set-Location], ItemNotFoundException
+    + FullyQualifiedErrorId : PathNotFound,Microsoft.PowerShell.Commands.SetLocationCommand
+cd : Cannot find path 'C:\Users\sysadmin\Documents\
+' because it does not exist.
+At line:1 char:1
++ cd '.\Documents\
++ ~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (C:\Users\sysadmin\Documents\
+:String) [Set-Location], ItemNotFoundException
+    + FullyQualifiedErrorId : PathNotFound,Microsoft.PowerShell.Commands.SetLocationCommand
+cd : Cannot find path 'C:\Users\sysadmin\Documents\
+' because it does not exist.
+At line:1 char:1
++ cd '.\Documents\
++ ~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (C:\Users\sysadmin\Documents\
+:String) [Set-Location], ItemNotFoundException
+    + FullyQualifiedErrorId : PathNotFound,Microsoft.PowerShell.Commands.SetLocationCommand
+
+**********************
+Command start time: 20210427223445
+**********************
+PS C:\Users\sysadmin> cd .\Documents\
+**********************
+Command start time: 20210427223446
+**********************
+PS C:\Users\sysadmin\Documents> ls
+
+
+    Directory: C:\Users\sysadmin\Documents
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d-----         4/27/2021  10:25 PM                20210427
+-a----         4/27/2021  10:33 PM             79 enum.acls.ps1
+
+
+**********************
+Command start time: 20210427223457
+**********************
+PS C:\Users\sysadmin\Documents> .\enum.acls.ps1
+
+
+    Directory: C:\Users\sysadmin\Documents
+
+
+Path          Owner                  Access
+----          -----                  ------
+20210427      BUILTIN\Administrators NT AUTHORITY\SYSTEM Allow  FullControl...
+enum.acls.ps1 BUILTIN\Administrators NT AUTHORITY\SYSTEM Allow  FullControl...
+
+

@@ -441,7 +441,7 @@ Answer the following:
 | **Actions on Objectives** | What does the software that the attacker sent do to complete it's tasks?|
 
 
-    Answer: Reconnaissance - The attacker sent out phishing e-mails.
+    Answer: Reconnaissance - The attacker sent out phishing e-mails most likely using about info from web pages.
             Weaponization - Fake PDF that included a zip file that included javascript files that would download an EXE or DLL.
             Delivery - Once the zip file was extracted, opening the javascript files when then cause the computer to run the EXE or DLL.
             Exploitation - The exploit installs a trojan.

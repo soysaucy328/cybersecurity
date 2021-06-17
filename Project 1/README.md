@@ -70,7 +70,7 @@ Ansible was used to automate configuration of the ELK machine. No configuration 
 - Ansible makes it easy to deploy application using playbooks to many machines.
 
 The playbook implements the following tasks:
-- ## Select which hosts to install 
+- # Select which hosts to install 
 ```bash
 ---
 - name: ELK
@@ -79,22 +79,45 @@ The playbook implements the following tasks:
   tasks:
   ```
 
-- ## Install docker.io
-![](images/dockerio.jpg)
+- # Install docker.io
+```bash
+- name: Install docker.io
+    apt:
+      update_cache: yes
+      name: docker.io
+      state: present
+      ```
 
-- ## Install pip3
-![](images/pip3.jpg)
+- # Install pip3
+```bash
+- name: Install pip3
+    apt:
+      name: python3-pip
+      state: present
+      ```
 
-- ## Install Docker Python Module
-![](images/dockerpython.jpg)
+- # Install Docker Python Module
+```bash
+- name: Install Docker python module
+    pip:
+      name: docker
+      state: present
+      ```
 
-- ## User more memory
-![](images/morememory.jpg)
+- # User more memory
+```bash
+- name: Use more memory
+    sysctl:
+      name: vm.max_map_count
+      value: '262144'
+      state: present
+      reload: yes
+      ```
 
-- ## Download and launch a docker elk container
+- # Download and launch a docker elk container
 ![](images/elkdownload.jpg)
 
-- ## Enable service docker on boot
+- # Enable service docker on boot
 ![](images/enableservice.jpg)
 
 The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance.

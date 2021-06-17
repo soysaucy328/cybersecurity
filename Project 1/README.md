@@ -71,55 +71,25 @@ Ansible was used to automate configuration of the ELK machine. No configuration 
 
 The playbook implements the following tasks:
 - ## Select which hosts to install 
-- - name: ELK
-  hosts: ELK
-  become: true
-  tasks:
+![](images/hosts.jpg)
 
 - ## Install docker.io
-- - name: Install docker.io
-    apt:
-      update_cache: yes
-      name: docker.io
-      state: present
+![](images/dockerio.jpg)
 
 -## Install pip3
-- name: Install pip3
-    apt:
-      name: python3-pip
-      state: present
+![](images/pip3.jpg)
 
 -## Install Docker Python Module
-- name: Install Docker python module
-    pip:
-      name: docker
-      state: present
+![](images/dockerpython.jpg)
 
 -## User more memory
-- name: Use more memory
-    sysctl:
-      name: vm.max_map_count
-      value: '262144'
-      state: present
-      reload: yes
+![](images/morememory.jpg)
 
 -## Download and launch a docker elk container
-- name: download and launch a docker elk container
-    docker_container:
-      name: elk
-      image: sebp/elk:761
-      state: started
-      restart_policy: always
-      published_ports:
-          - 5601:5601
-          - 9200:9200
-          - 5044:5044
+![](images/elkcontainer.jpg)
 
 -## Enable service docker on boot
-- name: Enable service docker on boot
-    systemd:
-      name: docker
-      enabled: yes
+![](images/enableservice.jpg)
 
 The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance.
 

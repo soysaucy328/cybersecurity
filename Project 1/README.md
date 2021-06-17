@@ -149,4 +149,7 @@ sudo apt install docker.io #install docker
 sudo service docker start #start docker
 systemctl status docker #check docker status
 sudo docker pull cyberxsecurity/ansible #Download docker ansible file
+sudo docker run --name ansible -it cyberxsecurity/ansible /bin/bash #Run and create container called 'Ansible'
+sudo docker start ansible && sudo docker attach ansible #Start ansible container and ssh into it
+ansible all -m ping #Check connections of containers
 ```

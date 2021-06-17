@@ -187,6 +187,7 @@ setup.kibana:
 - Check if the ELK server is running by going to: http://20.69.155.86:5601/app/kibana
 
 
+## Commands needed to get Ansible container up
 ```bash 
 sudo apt-get update #update all packages
 sudo apt install docker.io #install docker

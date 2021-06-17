@@ -86,7 +86,7 @@ The playbook implements the following tasks:
 ![](images/morememory.jpg)
 
 - ## Download and launch a docker elk container
-![](images/elkcontainer.jpg)
+![](images/elkdownload.jpg)
 
 - ## Enable service docker on boot
 ![](images/enableservice.jpg)

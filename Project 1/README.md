@@ -93,7 +93,7 @@ The playbook implements the following tasks:
 
 The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance.
 
-![](Images/elkcontainer.jpg)
+![](images/elkcontainer.jpg)
 
 ### Target Machines & Beats
 This ELK server is configured to monitor the following machines:
@@ -102,18 +102,32 @@ This ELK server is configured to monitor the following machines:
 - Web-3 10.0.0.8
 
 We have installed the following Beats on these machines:
-- Metricbeat
-- Filebeat
+Metricbeat and Filebeat were installed on the following:
+- ELK Server
+- Web-1
+- Web-2
+- Web-3
 
 These Beats allow us to collect the following information from each machine:
-- _TODO: In 1-2 sentences, explain what kind of data each beat collects, and provide 1 example of what you expect to see. E.g., `Winlogbeat` collects Windows logs, which we use to track user logon events, etc._
+- Filebeat - logs events
+- Metricbeat: system metrics and system statistics
 
 ### Using the Playbook
 In order to use the playbook, you will need to have an Ansible control node already configured. Assuming you have such a control node provisioned: 
 
 SSH into the control node and follow the steps below:
-- Copy the _____ file to _____.
-- Update the _____ file to include...
+- curl -L -O https://gist.githubusercontent.com/slape/5cc350109583af6cbe577bbcc0710c93/raw/eca603b72586fbe148c11f9c87bf96a63cb25760/Filebeat > /etc/ansible/files/filebeat-config.yml
+- Update the filebeat-config.yml file to include...
+
+```bash
+hosts: ["10.1.0.4:9200"]
+  username: "elastic"
+  password: "changeme" 
+
+```bash
+setup.kibana:
+  host: "10.1.0.4:5601"
+
 - Run the playbook, and navigate to ____ to check that the installation worked as expected.
 
 _TODO: Answer the following questions to fill in the blanks:_

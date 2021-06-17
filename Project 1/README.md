@@ -120,13 +120,15 @@ SSH into the control node and follow the steps below:
 - Update the filebeat-config.yml file to include...
 
 ```bash
-hosts: ["10.1.0.4:9200"]
+hosts: ["10.2.0.4:9200"]
   username: "elastic"
   password: "changeme" 
+```
 
 ```bash
 setup.kibana:
-  host: "10.1.0.4:5601"
+  host: "10.2.0.4:5601"
+```
 
 - Run the playbook, and navigate to ____ to check that the installation worked as expected.
 

@@ -27,7 +27,7 @@ The main purpose of this network is to expose a load-balanced and monitored inst
 
 Load balancing ensures that the application will be highly accessible, in addition to restricting traffic to the network.
 - Load Balancers will help againts DDos attacks and a jump box will help easily deploy containers to VMs 
--  
+
 
 Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the data and system logs.
 - Filebeat monitors locations and logs and sends the information to logstash or elasticsearch.

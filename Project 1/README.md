@@ -76,19 +76,19 @@ The playbook implements the following tasks:
 - ## Install docker.io
 ![](images/dockerio.jpg)
 
--## Install pip3
+- ## Install pip3
 ![](images/pip3.jpg)
 
--## Install Docker Python Module
+- ## Install Docker Python Module
 ![](images/dockerpython.jpg)
 
--## User more memory
+- ## User more memory
 ![](images/morememory.jpg)
 
--## Download and launch a docker elk container
+- ## Download and launch a docker elk container
 ![](images/elkcontainer.jpg)
 
--## Enable service docker on boot
+- ## Enable service docker on boot
 ![](images/enableservice.jpg)
 
 The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance.

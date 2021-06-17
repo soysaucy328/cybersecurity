@@ -180,6 +180,10 @@ setup.kibana:
 
 - Run the playbook, and navigate to http://20.69.155.86:5601/app/kibana to check that the installation worked as expected.
 
+### Kibana interface should load
+
+![](images/kibana.jpg)
+
 ### Playbook information
 - Filebeat playbook: filebeat-playbook.yml - copy to /etc/ansible/roles
 - Metricbeat playbook: metricbeat-playbook.yml - copy to /etc/ansible/roles

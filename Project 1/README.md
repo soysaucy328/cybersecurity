@@ -86,7 +86,7 @@ The playbook implements the following tasks:
       update_cache: yes
       name: docker.io
       state: present
-      ```
+ ```   
 
 - ### Install pip3
 ```bash
@@ -94,7 +94,7 @@ The playbook implements the following tasks:
     apt:
       name: python3-pip
       state: present
-      ```
+```
 
 - ### Install Docker Python Module
 ```bash
@@ -102,7 +102,7 @@ The playbook implements the following tasks:
     pip:
       name: docker
       state: present
-      ```
+```
 
 - ### User more memory
 ```bash
@@ -112,10 +112,21 @@ The playbook implements the following tasks:
       value: '262144'
       state: present
       reload: yes
-      ```
+```
 
-- # Download and launch a docker elk container
-![](images/elkdownload.jpg)
+- ### Download and launch a docker elk container
+```bash
+- name: download and launch a docker elk container
+    docker_container:
+      name: elk
+      image: sebp/elk:761
+      state: started
+      restart_policy: always
+      published_ports:
+          - 5601:5601
+          - 9200:9200
+          - 5044:5044
+```
 
 - # Enable service docker on boot
 ![](images/enableservice.jpg)

@@ -116,8 +116,11 @@ These Beats allow us to collect the following information from each machine:
 In order to use the playbook, you will need to have an Ansible control node already configured. Assuming you have such a control node provisioned: 
 
 SSH into the control node and follow the steps below:
-- curl -L -O https://gist.githubusercontent.com/slape/5cc350109583af6cbe577bbcc0710c93/raw/eca603b72586fbe148c11f9c87bf96a63cb25760/Filebeat > /etc/ansible/files/filebeat-config.yml
-- Update the filebeat-config.yml file to include...
+- curl https://gist.githubusercontent.com/slape/5cc350109583af6cbe577bbcc0710c93/raw/eca603b72586fbe148c11f9c87bf96a63cb25760/Filebeat >> /etc/ansible/filebeat-config.yml
+
+- curl https://gist.githubusercontent.com/slape/58541585cc1886d2e26cd8be557ce04c/raw/0ce2c7e744c54513616966affb5e9d96f5e12f73/metricbeat >> /etc/ansible/metricbeat-config.yml
+
+- Update the filebeat-config.yml and metricbeat-config.yml files to include...
 
 ```bash
 hosts: ["10.2.0.4:9200"]
@@ -130,11 +133,20 @@ setup.kibana:
   host: "10.2.0.4:5601"
 ```
 
-- Run the playbook, and navigate to ____ to check that the installation worked as expected.
+- Run the playbook, and navigate to http://20.69.155.86:5601/app/kibana to check that the installation worked as expected.
 
-_TODO: Answer the following questions to fill in the blanks:_
-- _Which file is the playbook? Where do you copy it?_
-- _Which file do you update to make Ansible run the playbook on a specific machine? How do I specify which machine to install the ELK server on versus which to install Filebeat on?_
-- _Which URL do you navigate to in order to check that the ELK server is running?
+### Playbook information
+- Filebeat playbook: filebeat-playbook.yml - copy to /etc/ansible/roles
+- Metricbeat playbook: metricbeat-playbook.yml - copy to /etc/ansible/roles
+- The hosts file needs to be modified in order to set machines in the correct groups (webserver) (elkserver). Once machines are in the correct group the playbook will install on group listed.
+- Check if the ELK server is running by going to: http://20.69.155.86:5601/app/kibana
 
 _As a **Bonus**, provide the specific commands the user will need to run to download the playbook, update the files, etc._
+
+```bash 
+sudo apt-get update #update all packages
+sudo apt install docker.io #install docker
+sudo service docker start #start docker
+systemctl status docker #check docker status
+sudo docker pull cyberxsecurity/ansible #Download docker ansible file
+```

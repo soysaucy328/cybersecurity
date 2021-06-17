@@ -25,19 +25,19 @@ This document contains the following details:
 
 The main purpose of this network is to expose a load-balanced and monitored instance of DVWA, the D*mn Vulnerable Web Application.
 
-Load balancing ensures that the application will be highly accessible, in addition to restricting access to the network.
-- _TODO: What aspect of security do load balancers protect? What is the advantage of a jump box?_
-- 
+Load balancing ensures that the application will be highly accessible, in addition to restricting traffic to the network.
+- Load Balancers will help againts DDos attacks and a jump box will help easily deploy containers to VMs 
+-  
 
 Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the data and system logs.
-- _TODO: What does Filebeat watch for?_
-- _TODO: What does Metricbeat record?_
+- Filebeat monitors locations and logs and sends the information to logstash or elasticsearch.
+- Metricbeat uses the metrics and stats and sends them to logstash or elasticsearch.
 
 The configuration details of each machine may be found below.
 
 | Name           | Function | IP Address | Operating System |
 |----------------|----------|------------|------------------|
-| Jump Box       | Gateway  | 10.0.0.1   | Linux - Ubuntu   |
+| Jump Box       | Gateway  | 10.0.0.4   | Linux - Ubuntu   |
 | ELK SERVER     | Server   | 10.2.0.4   | Linux - Ubuntu   |
 | WEB-1 VM (DVWA)| Server   | 10.0.0.5   | Linux - Ubuntu   |
 | WEB-2 VM (DVWA)| Server   | 10.0.0.6   | Linux - Ubuntu   |
@@ -48,18 +48,20 @@ The configuration details of each machine may be found below.
 The machines on the internal network are not exposed to the public Internet. 
 
 Only the ELK SERVER machine can accept connections from the Internet. Access to this machine is only allowed from the following IP addresses:
-- 172.90.64.149
+- 172.90.64.149:5601
 
-Machines within the network can only be accessed by _____.
-- _TODO: Which machine did you allow to access your ELK VM? What was its IP address?_
+Machines within the network can only be accessed by the jump-box.
+- The Jump Box machine at 10.0.0.4 has access via ssh.
 
 A summary of the access policies in place can be found in the table below.
 
-| Name     | Publicly Accessible | Allowed IP Addresses |
-|----------|---------------------|----------------------|
-| Jump Box | Yes/No              | 10.0.0.1 10.0.0.2    |
-|          |                     |                      |
-|          |                     |                      |
+| Name       | Publicly Accessible | Allowed IP Addresses   |
+|------------|---------------------|------------------------|
+| Jump Box   |       No            | 172.90.64.149 (via ssh)|
+| Elk Server |       No            | 172.90.64.149:5601     |
+| WEB-1      |       No            | 10.0.0.4 (via ssh)     |
+| WEB-2      |       No            | 10.0.0.4 (via ssh)     |
+| WEB-3      |       No            | 10.0.0.4 (via ssh)     |
 
 ### Elk Configuration
 

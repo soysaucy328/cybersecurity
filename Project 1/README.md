@@ -70,7 +70,7 @@ Ansible was used to automate configuration of the ELK machine. No configuration 
 - Ansible makes it easy to deploy application using playbooks to many machines.
 
 The playbook implements the following tasks:
-- # Select which hosts to install 
+- ### Select which hosts to install 
 ```bash
 ---
 - name: ELK
@@ -79,7 +79,7 @@ The playbook implements the following tasks:
   tasks:
   ```
 
-- # Install docker.io
+- ### Install docker.io
 ```bash
 - name: Install docker.io
     apt:
@@ -88,7 +88,7 @@ The playbook implements the following tasks:
       state: present
       ```
 
-- # Install pip3
+- ### Install pip3
 ```bash
 - name: Install pip3
     apt:
@@ -96,7 +96,7 @@ The playbook implements the following tasks:
       state: present
       ```
 
-- # Install Docker Python Module
+- ### Install Docker Python Module
 ```bash
 - name: Install Docker python module
     pip:
@@ -104,7 +104,7 @@ The playbook implements the following tasks:
       state: present
       ```
 
-- # User more memory
+- ### User more memory
 ```bash
 - name: Use more memory
     sysctl:

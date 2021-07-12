@@ -21,15 +21,19 @@ Enter the IP address for `demo.testfire.net` into Domain Dossier and answer the 
   1. Where is the company located: 
 
   **_Sunnyvale, CA_**
+
   2. What is the NetRange IP address:
 
   **_65.61.137.64/26_**
+
   3. What is the company they use to store their infrastructure:
 
   **_Rackspace Backbone Engineering (C05762718)_**
+
   4. What is the IP address of the DNS server:
 
   **_65.61.137.117_**
+  
 #### Step 3: Shodan
 
 - What open ports and running services did Shodan find:

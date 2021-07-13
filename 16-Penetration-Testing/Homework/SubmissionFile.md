@@ -56,7 +56,7 @@ Your client has asked that you help identify any vulnerabilities with their file
 
 **_nmap -sV 192.168.0.10_**
 
-![nmap](16-Penetration-Testing/Homework/images/nmap.jpg)
+![samba](16-Penetration-Testing/Homework/images/samba.jpg)
  
 - Bonus command to output results into a new text file named `zenmapscan.txt`:
 
@@ -66,7 +66,7 @@ Your client has asked that you help identify any vulnerabilities with their file
 
 **_nmap -sV -oN zenmapscan.txt --script smb-enum-shares 192.168.0.10_**
 
-![nmap2](16-Penetration-Testing/Homework/images/nmap2.jpg)
+![samba2](16-Penetration-Testing/Homework/images/samba2.jpg)
 
 - Once you have identified this vulnerability, answer the following questions for your client:
   1. What is the vulnerability: 

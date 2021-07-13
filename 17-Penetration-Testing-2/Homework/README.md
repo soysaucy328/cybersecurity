@@ -60,7 +60,7 @@ You've been provided full access to the network and are getting ping responses f
   
      > Answer: **_search icecast_**
 
-     ![searchsploit](/images/searchiceploit.jpg)
+     ![searchicecast](/images/searchicecast.jpg)
 
 3. Now that we know which exploits are available to us, let's start Metasploit:
  

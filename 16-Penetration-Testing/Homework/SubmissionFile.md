@@ -66,14 +66,13 @@ Your client has asked that you help identify any vulnerabilities with their file
 
 **_nmap -sV -oN zenmapscan.txt --script smb-enum-shares 192.168.0.10_**
 
-![samba2](16-Penetration-Testing/Homework/images/samba2.jpg)
 
 - Once you have identified this vulnerability, answer the following questions for your client:
   1. What is the vulnerability: 
   
   **_Anonymous users can read/write using the SAMBA service._**
 
-  ![samba](16-Penetration-Testing/Homework/images/samba.jpg)
+  ![samba](16-Penetration-Testing/Homework/images/samba2.jpg)
 
   2. Why is it dangerous:
 

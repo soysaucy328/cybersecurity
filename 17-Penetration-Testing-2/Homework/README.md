@@ -75,7 +75,7 @@ You've been provided full access to the network and are getting ping responses f
      
      > Answer: **_use exploit/windows/http/icecast_header_**
 
-     ![Icecast](images/4.jpg)
+     ![4](images/4.jpg)
  
 
    - Run the command to use the Icecast module:

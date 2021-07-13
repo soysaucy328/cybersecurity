@@ -53,12 +53,14 @@ You've been provided full access to the network and are getting ping responses f
 
       > Answer: nmap -sV 192.168.0.20
 
+      ![nmap](images/nmap.jpg)
+
        
 2. From the previous step, we see that the Icecast service is running. Let's start by attacking that service. Search for any Icecast exploits:
  
    - Run the SearchSploit commands to show available Icecast exploits.
   
-     > Answer: **_search icecast_**
+     > Answer: **_searchsploit icecast_**
 
      ![searchicecast](images/searchicecast.jpg)
 

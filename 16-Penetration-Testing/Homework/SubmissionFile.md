@@ -69,11 +69,19 @@ Your client has asked that you help identify any vulnerabilities with their file
 ![nmap2](16-Penetration-Testing/Homework/images/nmap2.jpg)
 
 - Once you have identified this vulnerability, answer the following questions for your client:
-  1. What is the vulnerability:
+  1. What is the vulnerability: 
+  
+  **_Anonymous users can read/write using the SAMBA service._**
+
+  ![samba](16-Penetration-Testing/Homework/images/samba.jpg)
 
   2. Why is it dangerous:
 
+  **_Anybody can connect to server and access information_**
+
   3. What mitigation strategies can you recommendations for the client to protect their server:
+
+  **_Disable anonymous access and make sure all machines are updated_**
 
 ---
 © 2020 Trilogy Education Services, a 2U, Inc. brand. All Rights Reserved.  

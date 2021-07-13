@@ -97,7 +97,7 @@ You've been provided full access to the network and are getting ping responses f
       
      > Answer: **_exploit_**
 
-     ![#6](#6.jpg)
+     ![useicecast](images/useicecast.jpg)
  
    - Run the command that performs a search for the `secretfile.txt` on the target.
       

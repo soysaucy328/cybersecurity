@@ -38,6 +38,14 @@ Enter the IP address for `demo.testfire.net` into Domain Dossier and answer the 
 
 - What open ports and running services did Shodan find:
 
+**_Port 80: Apache Tomcat/Coyote JSP engine1.1_**
+
+**_Port 443: Apache Tomcat/Coyote JSP engine1.1_**
+
+**_Port 8080: Apache Tomcat/Coyote JSP engine1.1_**
+
+![shodan](16-Penetration-Testing/Homework/images/shodan.jpg)
+
 #### Step 4: Recon-ng
 
 - Install the Recon module `xssed`. 

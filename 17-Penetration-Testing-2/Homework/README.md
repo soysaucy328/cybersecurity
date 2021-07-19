@@ -103,7 +103,7 @@ You've been provided full access to the network and are getting ping responses f
       
      > Answer: **_search -f *secretfile*.txt_**
 
-     ![#6-2](images/#6-2.jpg)
+     ![question6](images/question6.jpg)
   
  7. You should now have a Meterpreter session open.
  

@@ -124,7 +124,7 @@ You've been provided full access to the network and are getting ping responses f
 
 **_run post/multi/recon/local_exploit_suggester_**
 
-![#8](images/#8.jpg)
+![question8](images/question8.jpg)
  
    - **Note:** The exploit suggester is just that: a suggestion. Keep in mind that the listed suggestions may not include all available exploits.
 

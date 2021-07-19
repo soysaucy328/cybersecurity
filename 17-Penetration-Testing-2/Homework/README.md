@@ -53,7 +53,7 @@ You've been provided full access to the network and are getting ping responses f
 
       > Answer: nmap -sV 192.168.0.20
 
-      ![nmap](images/nmap.jpg)
+![nmap](images/nmap.jpg)
 
        
 2. From the previous step, we see that the Icecast service is running. Let's start by attacking that service. Search for any Icecast exploits:
@@ -62,7 +62,7 @@ You've been provided full access to the network and are getting ping responses f
   
      > Answer: **_searchsploit icecast_**
 
-     ![searchicecast](images/searchsploit.jpg)
+![searchicecast](images/searchsploit.jpg)
 
 3. Now that we know which exploits are available to us, let's start Metasploit:
  
@@ -77,7 +77,7 @@ You've been provided full access to the network and are getting ping responses f
      
      > Answer: **_use exploit/windows/http/icecast_header_**
 
-     ![useicecast](images/useicecast.jpg)
+![useicecast](images/useicecast.jpg)
  
 
    - Run the command to use the Icecast module:
@@ -103,7 +103,7 @@ You've been provided full access to the network and are getting ping responses f
       
      > Answer: **_search -f *secretfile*.txt_**
 
-     ![question6](images/question6.jpg)
+![question6](images/question6.jpg)
   
  7. You should now have a Meterpreter session open.
  
@@ -117,7 +117,7 @@ You've been provided full access to the network and are getting ping responses f
 
       > Answer: **_download /users/ieuser/documents/Drinks.recipe.txt_**
 
-      ![question7](images/question7.jpg)
+![question7](images/question7.jpg)
  
 
 8. You can also use Meterpreter's local exploit suggester to find possible exploits.

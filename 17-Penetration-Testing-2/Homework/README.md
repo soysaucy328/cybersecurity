@@ -109,7 +109,7 @@ You've been provided full access to the network and are getting ping responses f
  
     - Run the command to performs a search for the `recipe.txt` on the target:
 
-      > Answer: **_search -f *recipe*.txt_**
+      > Answer: **_"search -f *recipe*.txt"_**
  
  
     - **Bonus**: Run the command that exfiltrates the `recipe*.txt` file:

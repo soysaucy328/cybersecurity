@@ -99,9 +99,7 @@ You've been provided full access to the network and are getting ping responses f
       
      > Answer: **_exploit_**
 
-     ![useicecast](images/useicecast.jpg)
- 
-   - Run the command that performs a search for the `secretfile.txt` on the target.
+     - Run the command that performs a search for the `secretfile.txt` on the target.
       
      > Answer: **_search -f *secretfile*.txt_**
 

@@ -117,7 +117,7 @@ You've been provided full access to the network and are getting ping responses f
 
       > Answer: **_download /users/ieuser/documents/Drinks.recipe.txt_**
 
-      ![#7](images/#7.jpg)
+      ![question7](images/question7.jpg)
  
 
 8. You can also use Meterpreter's local exploit suggester to find possible exploits.

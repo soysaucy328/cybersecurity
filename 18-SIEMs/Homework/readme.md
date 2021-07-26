@@ -114,8 +114,11 @@ Submit a screenshot of your report and a screenshot of proof that the alert has 
      - Look for the `name` field to find failed logins.
      - Note the attack lasted several hours.
 
+```9AM on February 21, 2020 and lasted until around 2PM```
       
 3. Determine a baseline of normal activity and a threshold that would alert if a brute force attack is occurring.
+
+```A baseline of about 70 failed log-ons per hour was set, this should help alleviate false positives.``` 
 
 4. Design an alert to check the threshold every hour and email the SOC team at SOC@vandalay.com if triggered. 
 

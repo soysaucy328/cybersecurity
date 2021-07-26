@@ -74,6 +74,8 @@ Not only were web servers taken offline by a DDOS attack, but upload and downloa
     ```About 9 hours, It didn't recover until 2020-02-23 23:30:00```
 
 Submit a screen shot of your report and the answer to the questions above.
+
+![report](images/report.jpg)
  
 ### Step 2: Are We Vulnerable? 
 

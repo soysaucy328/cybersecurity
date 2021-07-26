@@ -96,6 +96,8 @@ Submit a screen shot of your report and the answer to the questions above.
 
 Submit a screenshot of your report and a screenshot of proof that the alert has been created.
 
+![alert](images/alert.jpg)
+![alert2](images/alert2.jpg)
 
 ### Step 3: Drawing the (base)line
 

@@ -29,13 +29,13 @@ Note: This is a public-facing windows server that VSI employees access.
 - Several users were impacted during the attack on March 25th.
 - Based on the attack signatures, what mitigations would you recommend to protect each user account? Provide global mitigations that the whole company can use and individual mitigations that are specific to each user.
 
-<mark>Account lock out after 5 incorrect attempts and also implementing MFA to ensure only the authorized individual logs in. </mark> 
+```Account lock out after 5 incorrect attempts and also implementing MFA to ensure only the authorized individual logs in.``` 
   
 #### Question 2
 - VSI has insider information that JobeCorp attempted to target users by sending "Bad Logins" to lock out every user.
 - What sort of mitigation could you use to protect against this?
 
-<mark>Use Capcha style log in authentication to ensure that bots or scripts are not being used. This along with MFA should mitigate this issue.</mark>
+```Use Capcha style log in authentication to ensure that bots or scripts are not being used. This along with MFA should mitigate this issue.```
   
 
 ### Part 2: Apache Webserver Attack:
@@ -45,7 +45,7 @@ Note: This is a public-facing windows server that VSI employees access.
 - Provide a "plain english" description of the rule.
   - For example: "Block all incoming HTTP traffic where the source IP comes from the city of Los Angeles."
 
-  <mark>Block all incoming HTTP traffic where the source IP comes from the Ukraine, before the attack there was no access from the Ukraine.</mark>
+  ```Block all incoming HTTP traffic where the source IP comes from the Ukraine, before the attack there was no access from the Ukraine.```
 
 - Provide a screen shot of the geographic map that justifies why you created this rule. 
 
@@ -64,8 +64,8 @@ Note: This is a public-facing windows server that VSI employees access.
   - Conceive of two more rules in "plain english". 
   - Hint: Look for other fields that indicate the attacker.
 
-  <mark> Have the IPS flag set for more than 500 HTTP POST REQUESTS happen within a 2 hour range</mark>
-  <mark> MFA and Captcha should also help mitigate this as stated previously</mark>
+  ``` Have the IPS flag set for more than 500 HTTP POST REQUESTS happen within a 2 hour range ```
+  ``` MFA and Captcha should also help mitigate this as stated previously ```
   
 
 

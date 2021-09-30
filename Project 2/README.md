@@ -13,7 +13,7 @@ Project demostrating my knowledge in defensive security, and pentration testing 
 
 -Open up a terminal and run an nmap of the network
 `nmap 192.168.1.0/24`
-!{Images/nmap_find_webserver.png}
+!(Images/nmap_find_webserver.png)
 
 - Looking at the image above we can see that port 80 is open on 192.168.1.105. Which is the machine that we are looking for.
 
